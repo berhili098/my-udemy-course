@@ -1,5 +1,5 @@
 //
-//  AppBarView.swift
+//  VerticalAppBarView.swift
 //  udemy
 //
 //  Created by Oussama Berhili on 3/2/2025.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct AppBarView: View {
+struct VerticalAppBarView: View {
     var body: some View {
         HStack {
-            TitleView(title: "Greetings")
+            TitleView(title: LocalizedStringKey("Greetings"))
             Spacer()
 
             CircleView()
@@ -19,5 +19,5 @@ struct AppBarView: View {
 }
 
 #Preview {
-    AppBarView()
+    VerticalAppBarView()
 }

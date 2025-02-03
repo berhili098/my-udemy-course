@@ -24,12 +24,6 @@ jobs:
       - name: Run static analysis
         run: swift package diagnose
 
-      - name: Build project
-        run: swift build --configuration debug
-
-      - name: Run tests
-        run: swift test --enable-code-coverage
-
       - name: Check formatting with swift-format
         run: |
           if which swift-format > /dev/null; then

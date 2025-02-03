@@ -1,5 +1,4 @@
-Here’s a **README** for your SwiftUI app, explaining its purpose and functionality in a simple and structured way:
-
+Hi 👋
 ---
 
 # **SwiftUI Learning App**

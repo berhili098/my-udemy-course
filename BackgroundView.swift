@@ -16,7 +16,7 @@ struct BackgroundView: View {
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         )
-        .opacity(0.3)
+        .opacity(1)
         .ignoresSafeArea()
     }
 }

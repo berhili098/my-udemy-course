@@ -19,7 +19,7 @@ struct CircleView: View {
 
     var angularGradient: AngularGradient {
         return AngularGradient(
-            gradient: Gradient(colors: [.myPink, .myPurple, .myBlue1, .orange, .myYellow]),
+            gradient: Gradient(colors: [.myPink, .myPurple, .myBlue2, .orange, .myYellow]),
             center: .center,
             angle: angle
         )

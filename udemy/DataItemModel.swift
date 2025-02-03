@@ -11,5 +11,5 @@ import SwiftUICore
 struct DataItemModel: Identifiable {
     let id = UUID()
     let color: Color
-    let text: String
+    let text: LocalizedStringKey
 }

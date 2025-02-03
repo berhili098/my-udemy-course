@@ -19,7 +19,9 @@ jobs:
         run: swift --version
 
       - name: Check for dependency issues
-        run: swift package resolve
+        run: |
+          cd udemy
+          swift package resolve
 
       - name: Run static analysis
         run: swift package diagnose

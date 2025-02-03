@@ -9,9 +9,9 @@ import SwiftUI
 
 struct TitleView: View {
     let title: String
-    @State private var subtitleContent = "Welcome to Swift programming"
+    @State private var subtitleContent : LocalizedStringKey = "Welcome to Swift programming"
 
-    private let randomListOfSubTitles: [String] = [
+    private let randomListOfSubTitles: [LocalizedStringKey] = [
         "Hello there !",
         "Welcome to Swift programming",
         "Are you ready",
@@ -29,7 +29,7 @@ struct TitleView: View {
         }.onTapGesture {
             withAnimation {
                 subtitleContent = randomListOfSubTitles
-                    .randomElement() ?? "Welcome to Swift programming"
+                    .randomElement() ?? LocalizedStringKey("Welcome to Swift programming")
             }
         }
     }

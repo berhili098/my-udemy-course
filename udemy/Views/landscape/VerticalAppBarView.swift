@@ -9,12 +9,11 @@ import SwiftUI
 
 struct VerticalAppBarView: View {
     var body: some View {
-        HStack {
+        VStack(alignment: .leading) {
             TitleView(title: LocalizedStringKey("Greetings"))
-            Spacer()
-
             CircleView()
-        }
+            Spacer()
+        }.padding()
     }
 }
 

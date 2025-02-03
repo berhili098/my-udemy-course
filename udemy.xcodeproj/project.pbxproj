@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		434A8CED2D50C59C002C50DC /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434A8CEC2D50C59C002C50DC /* BackgroundView.swift */; };
 		434A8CFE2D51025B002C50DC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434A8CFD2D51025B002C50DC /* Launch Screen.storyboard */; };
-		43A343B82D4D0BA000B0E411 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A343B72D4D0BA000B0E411 /* TextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,13 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		434A8CEC2D50C59C002C50DC /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		434A8CFC2D51025B002C50DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		434A8CFF2D51025B002C50DC /* mul */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = mul; path = "mul.lproj/Launch Screen.xcstrings"; sourceTree = "<group>"; };
 		43A3438A2D4CD36300B0E411 /* udemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = udemy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A3439A2D4CD36400B0E411 /* udemyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = udemyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43A343A42D4CD36400B0E411 /* udemyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = udemyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		43A343B72D4D0BA000B0E411 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -86,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				434A8CFD2D51025B002C50DC /* Launch Screen.storyboard */,
-				434A8CEC2D50C59C002C50DC /* BackgroundView.swift */,
-				43A343B72D4D0BA000B0E411 /* TextView.swift */,
 				43A3438C2D4CD36300B0E411 /* udemy */,
 				43A3439D2D4CD36400B0E411 /* udemyTests */,
 				43A343A72D4CD36400B0E411 /* udemyUITests */,
@@ -253,8 +247,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				434A8CED2D50C59C002C50DC /* BackgroundView.swift in Sources */,
-				43A343B82D4D0BA000B0E411 /* TextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

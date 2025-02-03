@@ -8,11 +8,34 @@
 import SwiftUI
 
 struct LanguageOptionsView: View {
+    @Binding var language : String
+    @Binding var layoutDirectionString : String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(systemName: "gearshape.fill")
+            .contextMenu{
+                Button(LocalizedStringKey("English")){
+                    language = "en"
+                    layoutDirectionString = leftToRight
+                }
+                Button(LocalizedStringKey("Arabic")){
+                    language = "ar"
+                    layoutDirectionString = rightToLeft
+                }
+                Button(LocalizedStringKey("Spanish")){
+                    language = "es"
+                    layoutDirectionString = leftToRight
+                }
+                Button(LocalizedStringKey("Hebrew")){
+                    language = "he"
+                    layoutDirectionString = rightToLeft
+                }
+            }
     }
 }
 
 #Preview {
-    LanguageOptionsView()
+    LanguageOptionsView(
+         language: .constant("en"),
+         layoutDirectionString: .constant(leftToRight)
+    )
 }

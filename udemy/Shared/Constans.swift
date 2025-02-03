@@ -6,3 +6,5 @@
 //
 
 import Foundation
+let leftToRight:String = "leftToRight"
+let rightToLeft:String = "rightToLeft"

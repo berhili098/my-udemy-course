@@ -10,7 +10,13 @@ import SwiftUI
 struct TextView: View {
     let text: LocalizedStringKey
     @State var color: Color
-
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+   
+    var isIpad = UIDevice.current.userInterfaceIdiom == .pad
+    var font :Font {
+        isIpad ? .largeTitle : .body
+    }
     let colors: [Color] = [
         .red,
         .green,
@@ -25,7 +31,7 @@ struct TextView: View {
 
     var body: some View {
         Text(text)
-
+            .font(font)
             .fontWeight(.semibold)
             .padding()
             .foregroundStyle(Color.white)

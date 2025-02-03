@@ -23,6 +23,28 @@
         }
       }
     },
+    "Arabic" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عربي"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "árabe"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עֲרָבִית"
+          }
+        }
+      }
+    },
     "Are you ready" : {
       "localizations" : {
         "ar" : {
@@ -67,6 +89,34 @@
         }
       }
     },
+    "Dark" : {
+
+    },
+    "Default Theme" : {
+
+    },
+    "English" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنجليزي"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inglés"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "אַנגְלִית"
+          }
+        }
+      }
+    },
     "Greetings" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -86,6 +136,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ברכות"
+          }
+        }
+      }
+    },
+    "Hebrew" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "العبرية"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hebreo"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "עִברִית"
           }
         }
       }
@@ -134,6 +206,9 @@
         }
       }
     },
+    "Light" : {
+
+    },
     "Programming recipes" : {
       "localizations" : {
         "ar" : {
@@ -152,6 +227,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "מתכוני תכנות"
+          }
+        }
+      }
+    },
+    "Spanish" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأسبانية"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Español"
+          }
+        },
+        "he" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "סְפָרַדִית"
           }
         }
       }

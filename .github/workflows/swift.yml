@@ -1,22 +1,55 @@
-# This workflow will build a Swift project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
-
-name: Swift
+name: Swift Full CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
-  build:
-
+  build-and-check:
     runs-on: macos-latest
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Swift
+        run: swift --version
+
+      - name: Check for dependency issues
+        run: swift package resolve
+
+      - name: Run static analysis
+        run: swift package diagnose
+
+      - name: Build project
+        run: swift build --configuration debug
+
+      - name: Run tests
+        run: swift test --enable-code-coverage
+
+      - name: Check formatting with swift-format
+        run: |
+          if which swift-format > /dev/null; then
+            swift-format lint --recursive .
+          else
+            echo "swift-format not installed. Skipping..."
+          fi
+
+      - name: Run SwiftLint
+        run: |
+          if which swiftlint > /dev/null; then
+            swiftlint
+          else
+            echo "SwiftLint not installed. Skipping..."
+          fi
+
+      - name: Run security check (Optional)
+        run: |
+          if which trivy > /dev/null; then
+            trivy fs .
+          else
+            echo "Trivy not installed. Skipping security scan..."
+          fi

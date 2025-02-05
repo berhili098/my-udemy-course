@@ -24,6 +24,7 @@
       }
     },
     "Arabic" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -89,6 +90,9 @@
         }
       }
     },
+    "Click on text and disc" : {
+
+    },
     "Dark" : {
 
     },
@@ -96,6 +100,7 @@
 
     },
     "English" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -141,6 +146,7 @@
       }
     },
     "Hebrew" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -209,6 +215,9 @@
     "Light" : {
 
     },
+    "New text will be randomly generated and observe nice animations!" : {
+
+    },
     "Programming recipes" : {
       "localizations" : {
         "ar" : {
@@ -232,6 +241,7 @@
       }
     },
     "Spanish" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

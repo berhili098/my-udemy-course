@@ -12,7 +12,7 @@ struct MainView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Binding var language: String
     @Binding var layoutDirectionString: String
-    @Binding var colorScheme : ColorScheme
+    @Binding var colorScheme : String
     
     private var isPortrait: Bool {
         horizontalSizeClass == .compact && verticalSizeClass == .regular
@@ -26,10 +26,10 @@ struct MainView: View {
         NavigationStack {
             contentView
                 .toolbar {
-                    ToolbarItem(placement: .topBarTrailing) {
+                    ToolbarItem(placement: .navigation) {
                         LanguageOptionsView(language: $language, layoutDirectionString: $layoutDirectionString)
                     }
-                    ToolbarItem(placement: .topBarLeading) {
+                    ToolbarItem(placement: .automatic) {
                         ColorSchemeOptionsView(colorScheme: $colorScheme)
                         
                     }
@@ -50,8 +50,8 @@ struct MainView: View {
 
 #Preview {
     MainView(
-        language: .constant("en"),
-        layoutDirectionString: .constant("leftToRight"),
-        colorScheme: .constant(.light)
+        language: .constant(defaultLanguage),
+        layoutDirectionString: .constant(leftToRight),
+        colorScheme: .constant(AppColorScheme.light.rawValue)
     )
 }

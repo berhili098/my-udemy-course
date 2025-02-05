@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct AppBarView: View {
+    private var udemyCourseTip = UdemyCourseTip()
     var body: some View {
         HStack {
             TitleView(title: LocalizedStringKey("Greetings"))
+                .popoverTip(udemyCourseTip)
             Spacer()
 
             CircleView()

@@ -8,29 +8,35 @@
 import SwiftUI
 
 struct ColorSchemeOptionsView: View {
-    @Binding var colorScheme : ColorScheme
+    @Binding var colorScheme : String
     
     @Environment(\.colorScheme) var defaultColorScheme
+    
+    
     var body: some View {
-        
-            Image(systemName: "globe")
-                .contextMenu{
+        Menu{
+            
                     Button( LocalizedStringKey("Light")){
-                        colorScheme = .light
+                        colorScheme = AppColorScheme.light.rawValue
                     }
                     Button((LocalizedStringKey("Dark"))){
-                        colorScheme = .dark
+                        colorScheme = AppColorScheme.dark.rawValue
                     }
                     Button((LocalizedStringKey("Default Theme"))){
-                        colorScheme = defaultColorScheme
+                        colorScheme = defaultColorScheme == .dark ? AppColorScheme.dark.rawValue : AppColorScheme.light.rawValue
                     }
-                }
+        }label: {
+            Image(systemName: colorScheme == AppColorScheme.dark.rawValue ? "moon.fill": "sun.max.fill")
+                .foregroundColor(.myBlack)
+           
+        }
+           
     }
 }
 
 #Preview {
     ColorSchemeOptionsView(
-        colorScheme: .constant(.light)
+        colorScheme: .constant(defaultColorScheme)
         
     )
 }

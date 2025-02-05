@@ -10,32 +10,34 @@ import SwiftUI
 struct LanguageOptionsView: View {
     @Binding var language : String
     @Binding var layoutDirectionString : String
-    var body: some View {
+    var body: some View { Menu {
+        Button(LocalizedStringKey("English")) {
+            language = "en"
+            layoutDirectionString = "leftToRight"
+        }
+        Button(LocalizedStringKey("Arabic")) {
+            language = "ar"
+            layoutDirectionString = "rightToLeft"
+        }
+        Button(LocalizedStringKey("Spanish")) {
+            language = "es"
+            layoutDirectionString = "leftToRight"
+        }
+        Button(LocalizedStringKey("Hebrew")) {
+            language = "he"
+            layoutDirectionString = "rightToLeft"
+        }
+    } label: {
         Image(systemName: "gearshape.fill")
-            .contextMenu{
-                Button(LocalizedStringKey("English")){
-                    language = "en"
-                    layoutDirectionString = leftToRight
-                }
-                Button(LocalizedStringKey("Arabic")){
-                    language = "ar"
-                    layoutDirectionString = rightToLeft
-                }
-                Button(LocalizedStringKey("Spanish")){
-                    language = "es"
-                    layoutDirectionString = leftToRight
-                }
-                Button(LocalizedStringKey("Hebrew")){
-                    language = "he"
-                    layoutDirectionString = rightToLeft
-                }
-            }
+            .foregroundColor(.myBlack)
+       
+    }
     }
 }
 
 #Preview {
     LanguageOptionsView(
-         language: .constant("en"),
-         layoutDirectionString: .constant(leftToRight)
+        language: .constant("en"),
+        layoutDirectionString: .constant(leftToRight)
     )
 }
